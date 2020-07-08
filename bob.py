@@ -3,15 +3,17 @@ import random
 
 random.seed()
 
-colors=['red','purple','blue',
-        'green','yellow','orange']
+def random_color():
+    rgbl=[random.randrange(0, 255), random.randrange(0, 255), random.randrange(0, 255)]    
+    return tuple(rgbl)
 
 t = turtle.Pen()
 t.speed(0)
+turtle.colormode(255)
 turtle.bgcolor('black')
 
-for x in range(360):
-    t.pencolor(colors[random.randrange(0,5)])
-    t.width(x/10+1)
+for x in range(720):
+    t.pencolor(random_color())
+    t.width(x/100+1)
     t.forward(x)
-    t.left(40)
+    t.left(59)
