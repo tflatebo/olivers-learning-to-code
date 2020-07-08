@@ -15,6 +15,6 @@ turtle.bgcolor("black")
 
 for x in range(720):
     t.pencolor(random_color())
-    t.width(x/500+1)
+    t.width(x/100+1)
     t.forward(x)
     t.left(179)
