@@ -8,12 +8,13 @@ def random_color():
     return tuple(rgbl)
 
 t = turtle.Pen()
-t.speed(0)
+t.speed(-5)
+
 turtle.colormode(255)
-turtle.bgcolor('black')
+turtle.bgcolor("black")
 
 for x in range(720):
     t.pencolor(random_color())
-    t.width(x/100+1)
+    t.width(x/500+1)
     t.forward(x)
-    t.left(59)
+    t.left(179)
