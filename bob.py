@@ -1,5 +1,4 @@
-import turtle
-import random
+import turtle, random, time
 
 random.seed()
 
@@ -13,8 +12,10 @@ t.speed(-5)
 turtle.colormode(255)
 turtle.bgcolor("black")
 
-for x in range(720):
+for x in range(1000):
     t.pencolor(random_color())
-    t.width(x/100+1)
+    t.width(x/200+1)
     t.forward(x)
     t.left(179)
+
+time.sleep(60)
