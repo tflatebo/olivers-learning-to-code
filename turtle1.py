@@ -6,16 +6,25 @@ def random_color():
     rgbl=[random.randrange(0, 255), random.randrange(0, 255), random.randrange(0, 255)]    
     return tuple(rgbl)
 
+sides = int(sys.argv[1])
+iterations = int(sys.argv[2])
+wait = int(sys.argv[3])
+
 turtle.colormode(255)
 turtle.bgcolor("black")
 
 t = turtle.Pen()
 t.speed(0)
-sides = int(sys.argv[1])
 
-for x in range (200):
-    t.forward(x*3 / sides+x)
+colors = []
+
+for c in range(sides):
+    colors.append(random_color())
+
+for x in range(iterations):
+    #t.forward(x*3 / sides+x)
+    t.circle(x/2)
     t.left(360/sides+1)
-    t.pencolor(random_color())
+    t.pencolor(colors[x % sides])
 
-time.sleep(10)
+time.sleep(wait)
